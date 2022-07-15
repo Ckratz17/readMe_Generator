@@ -3,8 +3,8 @@ const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
 const inquirer = require('inquirer')
 // TODO: Create an array of questions for user input
-function promptInit(){
-    return inquirer.prompt([
+
+    inquirer.prompt([
         {
             type: "input",
             name: "username",
@@ -25,6 +25,8 @@ function promptInit(){
             name: "title",
             message: "What is your project title?"
         },
+
+      //TOC
         {
             type: "input",
             name: "descriptions",
@@ -45,10 +47,7 @@ function promptInit(){
             name: "license",
             message: "What licenses would you like for your project?",
             choices: [
-                "apache2", "bsd2", "bsd3",
-                "cc1", "cc4-international", "cc4-sharealike",
-                "EPL1", "GNU GPLv2", "GNU GPLv3",
-                "MIT", "Unlicense"
+                "apache2", "bsd2", "bsd3", "cc1", "cc4-international", "cc4-sharealike", "EPL1", "GNU GPLv2", "GNU GPLv3", "MIT", "Unlicense"
             ]
         },
         {
@@ -62,11 +61,7 @@ function promptInit(){
             message: "What are the test instructions?"
         },
     ])
-    .then(answers => {
     
-       
-})}
-
 //function to write the read me
 function writeToFile(input) {
     let readMe = `# ${input.title}
@@ -103,6 +98,5 @@ function writeToFile(input) {
 }
 // TODO: Create a function to initialize app
 function init() {}
-
 // Function call to initialize app
 init();
