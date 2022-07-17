@@ -1,33 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs')
-// const generateMarkdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown')
 const inquirer = require('inquirer')
 // TODO: Create an array of questions for user input
-const generateMarkdown = ({title, descriptions, usage, installation, license, contribution, tests, github, email}) =>
-    `# ${title}
-    ##Table of Contents
-    [Description](#description)
-    [Installation](#installation)
-    [Usage](#usage)
-    [License](#license)
-    [Contributing](#contributing)
-    [Testing](#testing)
-    [Questions](#questions)
-    ##Description
-    ${descriptions}
-    ##Installation
-    ${installation}
-    ##Usage
-    ${usage}
-    ## License
-    ${license}
-    ##Contributing
-    ${contribution}
-    ##Testing
-    ${tests}
-    ##Questions
-    (${github})
-    ${email}`;
 
     function promptInit(){
         return inquirer.prompt([
@@ -87,17 +62,14 @@ const generateMarkdown = ({title, descriptions, usage, installation, license, co
             message: "What are the test instructions?"
         },
     ]).then((answers) => {
+        //writeFile to create the readme page
         const markdownContent = generateMarkdown(answers)
         fs.writeFile("README.md", markdownContent, (err)=>
         err? console.log(err) : console.log("Successfully created a README!"))
     })
 }
-//function to write the read me
 
-  
-//writeFile to create the readme page
 
-// TODO: Create a function to initialize app
 
 // Function call to initialize app
 promptInit();
