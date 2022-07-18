@@ -13,8 +13,8 @@ const inquirer = require('inquirer')
         },
         {
             type: "input",
-            name: "link",
-            message: "What is the link to your GitHub profile?"
+            name: 'repo',
+            message: "What is the name of your Github repo"
         },
         {
             type: "input",
@@ -26,8 +26,6 @@ const inquirer = require('inquirer')
             name: "title",
             message: "What is your project title?"
         },
-
-      //TOC
         {
             type: "input",
             name: "descriptions",
