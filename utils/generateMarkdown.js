@@ -20,40 +20,41 @@ function renderLicenseSection(license) {
 const generateMarkdown = ({title, descriptions, usage, installation, license, contribution, tests, username, email,}) =>
 `# ${title}
 
-[License](#license)
-
-##Table of Contents
-    
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+    ##Table of Contents
+   
 [Description](#description)
-
+    
 [Installation](#installation)
-
+    
 [Usage](#usage)
-
+    
+[License](#license)
+    
 [Contributing](#contributing)
-
+    
 [Testing](#testing)
-
+    
 [Questions](#questions)
-
+    
 ##Description
-
+    
 ${descriptions}
-
+    
 ##Installation
-
+    
 ${installation}
-
+    
 ##Usage
-
+    
 ${usage}
-
+    
 ## License
-
+    
 ${license}
-
+    
 ##Contributing
-
+    
 ${contribution}
 
 ##Testing
@@ -62,9 +63,8 @@ ${tests}
 
 ##Questions
 
-GitHub: (${username})
+(${username})
 
-Email: ${email}`;
-
+${email}`;
 
 module.exports = generateMarkdown;
