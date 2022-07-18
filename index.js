@@ -48,7 +48,7 @@ const inquirer = require('inquirer')
             name: "license",
             message: "What licenses would you like for your project?",
             choices: [
-                "apache2", "bsd2", "bsd3", "cc1", "cc4-international", "cc4-sharealike", "EPL1", "GNU GPLv2", "GNU GPLv3", "MIT", "Unlicense"
+                "apache2", "bsd2", "bsd3", "cc1", "cc4-international", "cc4-sharealike", "EPL1", "GNU GPLv2", "GNU GPLv3", "MIT", "Unlicensed"
             ]
         },
         {
