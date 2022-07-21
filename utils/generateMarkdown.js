@@ -37,15 +37,15 @@ const generateMarkdown = ({title, descriptions, usage, installation, license, co
     
 [Questions](#questions)
     
-##Description
+## Description
     
 ${descriptions}
     
-##Installation
+## Installation
     
 ${installation}
     
-##Usage
+## Usage
     
 ${usage}
     
@@ -53,15 +53,15 @@ ${usage}
     
 ${license}
     
-##Contributing
+## Contributing
     
 ${contribution}
 
-##Testing
+## Testing
 
 ${tests}
 
-##Questions
+## Questions
 
 (${username})
 
